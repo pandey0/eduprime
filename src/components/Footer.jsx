@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import Logo from '../assets/Logo.jpeg'; // Adjust the path if needed
+import Logo from '../assets/eduprimelogo.jpg'; // Adjust the path if needed
 import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
@@ -35,9 +35,9 @@ const Footer = () => {
                         <div className="flex-1 text-center md:text-left">
                             <p className="text-xl font-semibold mb-4 text-gray-200">COMPANY</p>
                             <ul className="flex flex-col gap-2 text-sm font-medium text-gray-400">
-                                <li onClick={() => handleNavigate('/')} className="hover:text-cyan-400 transition duration-300 cursor-pointer">Home</li>
-                                <li onClick={() => handleNavigate('/about')} className="hover:text-cyan-400 transition duration-300 cursor-pointer">About Us</li>
-                                <li onClick={() => handleNavigate('/programs')} className="hover:text-cyan-400 transition duration-300 cursor-pointer">Programs</li>
+                                <li onClick={() => handleNavigate('/')} className="hover:text-bronze-400 transition duration-300 cursor-pointer">Home</li>
+                                <li onClick={() => handleNavigate('/about')} className="hover:text-bronze-400 transition duration-300 cursor-pointer">About Us</li>
+                                <li onClick={() => handleNavigate('/programs')} className="hover:text-bronze-400 transition duration-300 cursor-pointer">Programs</li>
                             </ul>
                         </div>
 
@@ -46,11 +46,11 @@ const Footer = () => {
                             <p className="text-xl font-semibold mb-4 text-gray-200">GET IN TOUCH</p>
                             <ul className="flex flex-col gap-3 text-sm font-medium text-gray-400">
                                 <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <FaPhoneAlt className="text-cyan-400" />
+                                    <FaPhoneAlt className="text-bronze-400" />
                                     +919886537936
                                 </li>
                                 <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <FaEnvelope className="text-cyan-400" />
+                                    <FaEnvelope className="text-bronze-400" />
                                     contact@eduprimeglobalacademy.com
                                 </li>
                             </ul>

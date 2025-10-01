@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/Logo.jpeg'; // Adjust the path if needed
+import Logo from '../assets/eduprimelogo.jpg'; // Adjust the path if needed
 import heroimage from '../assets/heroimage.jpeg';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const HeroSection = () => {
             alt="EduPrime Global Academy"
             className="w-48 h-48 md:w-64 md:h-64 object-cover mb-6 mx-auto lg:mx-0"
           />
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-navy-900 to-bronze-500 bg-clip-text text-transparent">
             EduPrime Global Academy
           </h1>
           <p className="text-xl sm:text-2xl font-light mb-4 leading-relaxed text-black">
@@ -36,14 +36,14 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-start gap-6">
             <button
               onClick={() => navigate('/programs')}
-              className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 text-xl font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
+              className="bg-gradient-to-r from-navy-900 to-navy-700 text-white px-8 py-3 text-xl font-semibold rounded-lg hover:from-navy-800 hover:to-navy-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg border-2 border-bronze-500 hover:border-bronze-600"
               aria-label="Explore Our Programs"
             >
               Explore Our Programs
             </button>
             <button
               onClick={() => navigate('/contact')}
-              className="bg-gradient-to-r from-green-600 to-emerald-500 text-white px-8 py-3 text-xl font-semibold rounded-lg hover:from-green-700 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
+              className="bg-gradient-to-r from-bronze-500 to-bronze-600 text-white px-8 py-3 text-xl font-semibold rounded-lg hover:from-bronze-600 hover:to-bronze-700 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg border-2 border-navy-900 hover:border-navy-800"
               aria-label="Join Us Today"
             >
               Join Us Today

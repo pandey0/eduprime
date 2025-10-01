@@ -19,26 +19,26 @@ const Navbar = () => {
         {/* Logo Section */}
         <button
           onClick={() => handleNavigate('/')}
-          className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent hover:from-blue-700 hover:to-cyan-600 transition-all duration-300"
+          className="text-2xl font-bold bg-gradient-to-r from-navy-900 to-bronze-500 bg-clip-text text-transparent hover:from-navy-800 hover:to-bronze-600 transition-all duration-300"
         >
           EduPrime Global Academy
         </button>
 
         {/* Navigation Links (Desktop) */}
         <nav className="hidden md:flex space-x-4 items-center">
-          <button onClick={() => handleNavigate('/')} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+          <button onClick={() => handleNavigate('/')} className="px-4 py-2 text-gray-700 hover:text-bronze-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-bronze-500 hover:after:w-full after:transition-all after:duration-300">
             Home
           </button>
-          <button onClick={() => handleNavigate('/about')} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+          <button onClick={() => handleNavigate('/about')} className="px-4 py-2 text-gray-700 hover:text-bronze-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-bronze-500 hover:after:w-full after:transition-all after:duration-300">
             About Us
           </button>
-          <button onClick={() => handleNavigate('/Programs')} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+          <button onClick={() => handleNavigate('/Programs')} className="px-4 py-2 text-gray-700 hover:text-bronze-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-bronze-500 hover:after:w-full after:transition-all after:duration-300">
             Programs
           </button>
-          <button onClick={() => handleNavigate('/contact')} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+          <button onClick={() => handleNavigate('/contact')} className="px-4 py-2 text-gray-700 hover:text-bronze-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-bronze-500 hover:after:w-full after:transition-all after:duration-300">
             Contact
           </button>
-          <button onClick={() => handleNavigate('/gallery')} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300">
+          <button onClick={() => handleNavigate('/gallery')} className="px-4 py-2 text-gray-700 hover:text-bronze-600 font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-bronze-500 hover:after:w-full after:transition-all after:duration-300">
             Gallery
           </button>
         </nav>

@@ -30,7 +30,7 @@ const Contact = () => {
     <div className="container mx-auto px-4 py-12">
       {/* Contact Form Section */}
       <section className="mb-12">
-        <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-8">Contact Us</h2>
+        <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-navy-900 to-bronze-500 bg-clip-text text-transparent mb-8">Contact Us</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white rounded-2xl shadow-2xl p-8">
           <div className="mb-6">
             <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Your Name</label>
@@ -39,7 +39,7 @@ const Contact = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none"
+              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-bronze-500 focus:ring-2 focus:ring-bronze-200 transition-all duration-200 outline-none"
               placeholder="Enter your name"
               required
             />
@@ -51,7 +51,7 @@ const Contact = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none"
+              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-bronze-500 focus:ring-2 focus:ring-bronze-200 transition-all duration-200 outline-none"
               placeholder="Enter your email"
               required
             />
@@ -71,7 +71,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className={`w-full py-4 rounded-lg text-white font-semibold text-lg transition-all duration-300 ${isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transform hover:scale-105 shadow-lg'}`}
+            className={`w-full py-4 rounded-lg text-white font-semibold text-lg transition-all duration-300 ${isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-navy-900 to-bronze-500 hover:from-navy-800 hover:to-bronze-600 transform hover:scale-105 shadow-lg'}`}
             disabled={isLoading}
           >
             {isLoading ? 'Sending...' : 'Send Message'}
