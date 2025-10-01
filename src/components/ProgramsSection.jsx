@@ -22,14 +22,14 @@ const ProgramsSection = () => {
         {topPrograms.map((program, index) => (
           <div
             key={index}
-            className="bg-white text-gray-800 p-4 shadow-md hover:shadow-xl transform transition duration-300 ease-in-out hover:scale-105 border border-solid border-gray-300 w-full h-auto" // Adjusted to be flexible
+            className="bg-white text-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 border border-gray-200 w-full h-auto cursor-pointer group overflow-hidden" // Adjusted to be flexible
             onClick={() => navigate(program.path)} // Use program.path for navigation
           >
-            <div className="w-full h-48 sm:h-56 md:h-64 relative">
+            <div className="w-full h-48 sm:h-56 md:h-64 relative overflow-hidden rounded-lg">
               <img
                 src={program.image}
                 alt={program.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-4">{program.name}</h3>

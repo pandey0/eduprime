@@ -27,43 +27,43 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-12">
       {/* Contact Form Section */}
-      <section className="mb-8">
-        <h2 className="text-4xl font-semibold text-center text-gray-800 mb-6">Contact Us</h2>
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700">Your Name</label>
+      <section className="mb-12">
+        <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-8">Contact Us</h2>
+        <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white rounded-2xl shadow-2xl p-8">
+          <div className="mb-6">
+            <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Your Name</label>
             <input
               type="text"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 border border-gray-300"
+              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none"
               placeholder="Enter your name"
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700">Your Email</label>
+          <div className="mb-6">
+            <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Your Email</label>
             <input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 border border-gray-300"
+              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none"
               placeholder="Enter your email"
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700">Your Message</label>
+          <div className="mb-6">
+            <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Your Message</label>
             <textarea
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              rows="4"
-              className="w-full p-3 border border-gray-300"
+              rows="5"
+              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none resize-none"
               placeholder="Enter your message"
               required
             />
@@ -71,10 +71,10 @@ const Contact = () => {
 
           <button
             type="submit"
-            className={`w-full py-3 ${isLoading ? 'bg-gray-400' : 'bg-blue-500'} text-white hover:bg-blue-600`}
-            disabled={isLoading} // Disable the button while loading
+            className={`w-full py-4 rounded-lg text-white font-semibold text-lg transition-all duration-300 ${isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transform hover:scale-105 shadow-lg'}`}
+            disabled={isLoading}
           >
-            {isLoading ? 'Sending...' : 'Send Message'} {/* Show loading text */}
+            {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </section>
@@ -105,7 +105,7 @@ const Contact = () => {
           <p className="mb-2">Or reach out to us via email:</p>
           <a href="mailto:youremail@example.com" className="text-blue-500 hover:underline">
             <FaEnvelope size={20} className="inline mr-2" />
-            bhimsen@edupieglobal.com
+            contact@eduprimeglobalacademy.com
           </a>
         </div>
       </section>

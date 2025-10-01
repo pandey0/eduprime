@@ -11,7 +11,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="py-10 bg-gray-800 text-white">
+        <footer className="py-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
             <div className="container mx-auto px-6">
                 {/* Footer Content */}
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
@@ -19,13 +19,13 @@ const Footer = () => {
                     <div className="flex-1 text-center md:text-left mb-10 md:mb-0">
                         {/* Logo */}
 <div className="flex justify-center md:ml-24 mb-4">  {/* Adjust the ml-24 value to push the logo more to the right */}
-    <img src={Logo} className="w-32" alt="Edu-Pie Global Logo" />
+    <img src={Logo} className="w-32" alt="EduPrime Global Academy Logo" />
 </div>
 
 
                         {/* Footer Description */}
                         <p className="text-sm font-medium text-gray-400 mx-auto md:mx-0">
-                            Edu-Pie Global is committed to enhancing your skills and transforming your career with expert trainers in various domains. Join us to unlock your potential!
+                            EduPrime Global Academy is committed to enhancing your skills and transforming your career with expert trainers in various domains. Join us to unlock your potential!
                         </p>
                     </div>
 
@@ -35,9 +35,9 @@ const Footer = () => {
                         <div className="flex-1 text-center md:text-left">
                             <p className="text-xl font-semibold mb-4 text-gray-200">COMPANY</p>
                             <ul className="flex flex-col gap-2 text-sm font-medium text-gray-400">
-                                <li onClick={() => handleNavigate('/')} className="hover:text-green-400 transition duration-300 cursor-pointer">Home</li>
-                                <li onClick={() => handleNavigate('/about')} className="hover:text-green-400 transition duration-300 cursor-pointer">About Us</li>
-                                <li onClick={() => handleNavigate('/programs')} className="hover:text-green-400 transition duration-300 cursor-pointer">Programs</li>
+                                <li onClick={() => handleNavigate('/')} className="hover:text-cyan-400 transition duration-300 cursor-pointer">Home</li>
+                                <li onClick={() => handleNavigate('/about')} className="hover:text-cyan-400 transition duration-300 cursor-pointer">About Us</li>
+                                <li onClick={() => handleNavigate('/programs')} className="hover:text-cyan-400 transition duration-300 cursor-pointer">Programs</li>
                             </ul>
                         </div>
 
@@ -46,12 +46,12 @@ const Footer = () => {
                             <p className="text-xl font-semibold mb-4 text-gray-200">GET IN TOUCH</p>
                             <ul className="flex flex-col gap-3 text-sm font-medium text-gray-400">
                                 <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <FaPhoneAlt className="text-green-400" />
+                                    <FaPhoneAlt className="text-cyan-400" />
                                     +919886537936
                                 </li>
                                 <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <FaEnvelope className="text-green-400" />
-                                    edupieglobal@gmail.com
+                                    <FaEnvelope className="text-cyan-400" />
+                                    contact@eduprimeglobalacademy.com
                                 </li>
                             </ul>
                         </div>
@@ -81,7 +81,7 @@ const Footer = () => {
 
                 {/* Copyright Section */}
                 <div className="text-center text-sm font-medium text-gray-500">
-                    <p>© {new Date().getFullYear()} Edu-Pie Global. All Rights Reserved.</p>
+                    <p>© {new Date().getFullYear()} EduPrime Global Academy. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

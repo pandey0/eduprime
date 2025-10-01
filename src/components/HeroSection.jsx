@@ -14,11 +14,11 @@ const HeroSection = () => {
         <div className="relative z-10 text-center lg:text-left px-6 lg:px-12 max-w-lg mx-auto space-y-6">
           <img
             src={Logo}
-            alt="Edu-Pie Global"
+            alt="EduPrime Global Academy"
             className="w-48 h-48 md:w-64 md:h-64 object-cover mb-6 mx-auto lg:mx-0"
           />
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-black">
-            EDU-PIE GLOBAL, LLP
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            EduPrime Global Academy
           </h1>
           <p className="text-xl sm:text-2xl font-light mb-4 leading-relaxed text-black">
             Planning | Initiation | Evaluation
@@ -36,14 +36,14 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-start gap-6">
             <button
               onClick={() => navigate('/programs')}
-              className="bg-purple-500 text-white px-8 py-3 text-xl font-semibold hover:bg-blue-700 transition duration-300 ease-in-out"
+              className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 text-xl font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
               aria-label="Explore Our Programs"
             >
               Explore Our Programs
             </button>
             <button
               onClick={() => navigate('/contact')}
-              className="bg-purple-500 text-white px-8 py-3 text-xl font-semibold hover:bg-green-700 transition duration-300 ease-in-out"
+              className="bg-gradient-to-r from-green-600 to-emerald-500 text-white px-8 py-3 text-xl font-semibold rounded-lg hover:from-green-700 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
               aria-label="Join Us Today"
             >
               Join Us Today
@@ -58,7 +58,7 @@ const HeroSection = () => {
         <div className="relative z-10 w-full h-auto">
           <img
             src={heroimage} // Replace with your image path
-            alt="Edu-Pie Global"
+            alt="EduPrime Global Academy"
             className="w-full h-auto object-cover"
           />
         </div>

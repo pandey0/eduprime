@@ -47,7 +47,7 @@ const About = () => {
           About Us
         </h2>
         <p className="text-lg text-gray-700">
-          EDU-PIE GLOBAL was established with the vision to bridge the gap between academic education and the corporate world. Our mission is to make graduates and undergraduates 'corporate-ready' by equipping them with necessary soft skills, communication abilities, and practical knowledge.
+          EduPrime Global Academy was established with the vision to bridge the gap between academic education and the corporate world. Our mission is to make graduates and undergraduates 'corporate-ready' by equipping them with necessary soft skills, communication abilities, and practical knowledge.
         </p>
         <p className="text-lg text-gray-700 mt-4">
           Our goal is to help students and professionals enhance their skills through various courses and workshops. We aim to create professionals who are well-prepared to meet the demands of the corporate world.
@@ -113,9 +113,9 @@ const About = () => {
             className="w-80 h-80 object-cover rounded-full shadow-lg"
           />
           <h4 className="text-2xl font-medium text-gray-800">M Bhimsen</h4>
-          <p className="text-lg text-gray-600">Director, Edu-Pie Global, LLP</p>
+          <p className="text-lg text-gray-600">Director, EduPrime Global Academy</p>
           <p className="mt-4 text-lg text-gray-700">
-            M Bhimsen is a seasoned educator with 35 years of teaching experience. He began his career in the Indian Air Force, in the Education Department. He transitioned to the private sector, working with T.I.M.E ,where he was imparting verbal ability traning to aspirants of CAT & GMAT .Later, he joined as the VP (Marketing) at SilverPeak Global Pvt Ltd . Since 2021, he has been freelancing, offering Verbal Ability classes, soft skills training. Currently,he is the Director Edu-Pie Global .
+            M Bhimsen is a seasoned educator with 35 years of teaching experience. He began his career in the Indian Air Force, in the Education Department. He transitioned to the private sector, working with T.I.M.E ,where he was imparting verbal ability training to aspirants of CAT & GMAT. Later, he joined as the VP (Marketing) at SilverPeak Global Pvt Ltd. Since 2021, he has been freelancing, offering Verbal Ability classes, soft skills training. Currently, he is the Director of EduPrime Global Academy.
           </p>
         </div>
       </section>
