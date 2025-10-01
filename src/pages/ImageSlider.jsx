@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import adi1 from "../assets/gallery/adi1.jpeg";
@@ -120,37 +120,127 @@ const slideImages = [
 ];
 
 const ImageSlider = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [view, setView] = useState('slider');
+
   return (
-    <div
-      className=""
-      style={{
-        paddingTop: "60px",
-        paddingBottom: "60px",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        width: "100%",
-      }}
-    >
-      <Slide
-        arrows={true}
-        pauseOnHover={true}
-        duration={5000}
-        transitionDuration={1000}
-        infinite={true}
-        autoplay={true}
-      >
-        {slideImages.map((slideImage, index) => (
-          <div key={index} style={slideStyle}>
+    <div className="py-12 px-4 max-w-7xl mx-auto">
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <h1 className="text-5xl font-bold bg-gradient-to-r from-navy-900 to-bronze-500 bg-clip-text text-transparent mb-4">
+          Our Gallery
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Capturing moments of learning, growth, and transformation
+        </p>
+
+        {/* View Toggle */}
+        <div className="flex justify-center gap-4 mb-8">
+          <button
+            onClick={() => setView('slider')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              view === 'slider'
+                ? 'bg-gradient-to-r from-navy-900 to-bronze-500 text-white shadow-lg transform scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Slideshow View
+          </button>
+          <button
+            onClick={() => setView('grid')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              view === 'grid'
+                ? 'bg-gradient-to-r from-navy-900 to-bronze-500 text-white shadow-lg transform scale-105'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Grid View
+          </button>
+        </div>
+      </div>
+
+      {/* Slider View */}
+      {view === 'slider' && (
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <Slide
+            arrows={true}
+            pauseOnHover={true}
+            duration={5000}
+            transitionDuration={1000}
+            infinite={true}
+            autoplay={true}
+          >
+            {slideImages.map((slideImage, index) => (
+              <div key={index} style={slideStyle}>
+                <img
+                  src={slideImage.url}
+                  alt={slideImage.caption}
+                  style={imageStyle}
+                  loading="lazy"
+                />
+                {slideImage.caption && (
+                  <div style={captionStyle}>{slideImage.caption}</div>
+                )}
+              </div>
+            ))}
+          </Slide>
+        </div>
+      )}
+
+      {/* Grid View */}
+      {view === 'grid' && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {slideImages.map((slideImage, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105 hover:-translate-y-2"
+              onClick={() => setSelectedImage(slideImage)}
+            >
+              <div className="aspect-w-16 aspect-h-12 relative overflow-hidden bg-gray-200">
+                <img
+                  src={slideImage.url}
+                  alt={slideImage.caption}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              {slideImage.caption && (
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-sm font-medium line-clamp-2">{slideImage.caption}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 animate-fadeIn"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl hover:text-bronze-400 transition-colors duration-200 z-10"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <div className="max-w-6xl max-h-[90vh] relative" onClick={(e) => e.stopPropagation()}>
             <img
-              src={slideImage.url}
-              alt={slideImage.caption}
-              style={imageStyle}
-              loading="lazy"
+              src={selectedImage.url}
+              alt={selectedImage.caption}
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
             />
-            <div style={captionStyle}>{slideImage.caption}</div>
+            {selectedImage.caption && (
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
+                <p className="text-white text-lg font-medium text-center">{selectedImage.caption}</p>
+              </div>
+            )}
           </div>
-        ))}
-      </Slide>
+        </div>
+      )}
     </div>
   );
 };
